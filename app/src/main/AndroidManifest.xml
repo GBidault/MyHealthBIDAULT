@@ -12,10 +12,14 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.fr.diiage.bidault.myhealth.PersonneProvider.personne"/>
             </intent-filter>
         </activity>
+
+        <provider android:name="com.diiage.guillaumebidault.myhealthbidault.provider.PersonneProvider"
+            android:authorities="fr.diiage.bidault.myhealth.PersonneProvider" android:exported="true" />
+
     </application>
 
 </manifest>
